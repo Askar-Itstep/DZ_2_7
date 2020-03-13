@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="16dp"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_gravity="center_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Конвертер валют"
+        android:textSize="30dp"/>
+
+    <TextView
+        android:textSize="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Введите сумму:" />
+
+    <EditText
+        android:textSize="20dp"
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/edtSum"
+        android:background="@color/colorBackground"/>
+
+    <TextView
+        android:textSize="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Курс:" />
+
+    <TextView
+        android:id="@+id/tvCourse"
+        android:textSize="20dp"
+        android:gravity="center"
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:background="@color/colorBackground"
+        android:text="3.75"/>
+
+    <TextView
+        android:textSize="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Выберите валюту:" />
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/currency_start_spinner"/>
+
+    <TextView
+        android:textSize="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Конвертировать в::" />
+
+    <Spinner
+
+        android:layout_marginBottom="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/currency_finish_spinner"/>
+
+    <RadioGroup
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="100dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RadioButton
+            android:id="@+id/rbtn_nation_bank"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Нацбанк РК"
+            android:textSize="20dp" />
+        <RadioButton
+            android:id="@+id/rbtn_purchase"
+            android:textSize="20dp"
+            android:text="ПОКУПКА"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <RadioButton
+            android:id="@+id/rbtn_buy"
+            android:textSize="20dp"
+            android:text="ПРОДАЖА"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RadioGroup>
+    <TextView
+        android:textSize="20dp"
+        android:gravity="center"
+        android:layout_marginTop="12dp"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:background="@color/colorBackground"
+        android:id="@+id/tvExit_sum" />
+
+    <Button
+        android:layout_marginTop="8dp"
+        android:text="Рассчитать"
+        android:textSize="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_calc"
+        android:onClick="btnClick"/>
+</LinearLayout>
